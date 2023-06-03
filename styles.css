@@ -1,8 +1,12 @@
 .product-wrap {
-    width: 300px;
-    text-align: center;
-    margin: 0 auto;
+    width: 100px;
+    text-align: cent er;
+    margin: 20;
     background: white;
+    float: left;
+    position: relative;
+    top: -20px;
+    
  }
  .product-image {
     position: relative;
