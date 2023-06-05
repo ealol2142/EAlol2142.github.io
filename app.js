@@ -45,15 +45,13 @@ btn3.addEventListener("click", function(){
 });
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
-    let data = {
-        name: item,
-    }
-    tg.sendData(JSON.stringify(data));
+    tg.sendData(item);
 });
 
-let usercard = document.getElementById("usercard");
 
-let p = document.createElement("p");
+// let usercard = document.getElementById("usercard");
+
+// let p = document.createElement("p");
 
 // p.innerText = `${tg.initDataUnsafe.firstName}
 // ${tg.initDataUnsafe.last_name}`;
