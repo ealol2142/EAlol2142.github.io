@@ -5,9 +5,9 @@ tg.expand();
 let item = "";
 let choice = "";
 
-let alum_pipes = document.getElementById("Aluminum pipes");
+let alum_pipes = document.getElementById("Aluminum_pipes");
 let boards = document.getElementById("Boards");
-let floor_til = document.getElementById("Floor tiles");
+let floor_til = document.getElementById("Floor_tiles");
 
 alum_pipes.addEventListener("click", function(){
     item = "Aluminum pipes";
