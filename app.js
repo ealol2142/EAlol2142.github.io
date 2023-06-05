@@ -40,7 +40,7 @@ btn3.addEventListener("click", function(){
 });
 
 choice.addEventListener("click", () => {
-    let name = document.getElementById("choice").value;
+    let name = document.getElementById(choice).value;
     let data = {
         name: name,
     }
