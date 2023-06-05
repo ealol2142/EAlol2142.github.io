@@ -22,7 +22,10 @@ floor_til.addEventListener("click", function(){
 });
 
 btn1.addEventListener("click", () => {
-    tg.sendData(item);
+    data={
+        itemName: item,
+    }
+    tg.sendData(data);
     tg.close()
 });
 
