@@ -7,9 +7,9 @@ tg.MainButton.color = "#2cab37";
 
 let item = "";
 
-let btn1 = document.getElementById("btn1");
-let btn2 = document.getElementById("btn2");
-let btn3 = document.getElementById("btn3");
+let btn1 = document.getElementById("btn1").value;
+let btn2 = document.getElementById("btn2").value;
+let btn3 = document.getElementById("btn3").value;
 
 btn1.addEventListener("click", function(){
     if (tg.MainButton.isVisible){
@@ -45,7 +45,10 @@ btn3.addEventListener("click", function(){
 });
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
-    tg.sendData(item);
+    let data = {
+        name: item,
+    }
+    tg.sendData(JSON.stringify(data));
 });
 
 let usercard = document.getElementById("usercard");
