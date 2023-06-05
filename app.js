@@ -6,20 +6,15 @@ tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
 
 let item = "";
+let choice = "";
 
 let btn1 = document.getElementById("btn1");
 let btn2 = document.getElementById("btn2");
 let btn3 = document.getElementById("btn3");
 
 btn1.addEventListener("click", function(){
-    if (tg.MainButton.isVisible){
-        tg.MainButton.hide();
-    }
-    else {
-        tg.MainButton.setText("Вы выбрали 1 кнопку");
-        item = "1";
-        tg.MainButton.show();
-    }
+    item = "1";
+    choice = btn1;
 });
 
 btn2.addEventListener("click", function(){
@@ -44,15 +39,16 @@ btn3.addEventListener("click", function(){
     }
 });
 
-Telegram.WebApp.onEvent("mainButtonClicked", function(){
-    tg.sendData(item);
+choice.addEventListener("click", () => {
+    let name = document.getElementById("choice").value;
+    let data = {
+        name: name,
+    }
+    tg.sendData(JSON.stringify(data));
+    tg.close()
 });
 
+// Telegram.WebApp.onEvent("mainButtonClicked", function(){
+//     tg.sendData(item);
+// });
 
-// let usercard = document.getElementById("usercard");
-
-// let p = document.createElement("p");
-
-// p.innerText = `${tg.initDataUnsafe.firstName}
-// ${tg.initDataUnsafe.last_name}`;
-// usercard.appendChild(p);
