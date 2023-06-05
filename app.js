@@ -7,9 +7,9 @@ tg.MainButton.color = "#2cab37";
 
 let item = "";
 
-let btn1 = document.getElementById("btn1").value;
-let btn2 = document.getElementById("btn2").value;
-let btn3 = document.getElementById("btn3").value;
+let btn1 = document.getElementById("btn1");
+let btn2 = document.getElementById("btn2");
+let btn3 = document.getElementById("btn3");
 
 btn1.addEventListener("click", function(){
     if (tg.MainButton.isVisible){
