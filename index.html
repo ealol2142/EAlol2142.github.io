@@ -30,7 +30,7 @@
             <img src="/pictures/Logs.jpg" height="100">
             <div class="shadow"></div>
           </a>
-          <a class="detail-link" href="" title="Выбрать"></a>
+          <a class="detail-link" href="" title="Выбрать" id="logs"></a>
           <div class="actions">
             <div class="actions-btn">
             </div>
@@ -48,7 +48,7 @@
           <img src="/pictures/mainzu-mandala-white.65ebc11f1e9d.jpg" height="100">
           <div class="shadow"></div>
         </a>
-        <a class="detail-link" href="" title="Выбрать"></a>
+        <a class="detail-link" href="" title="Выбрать" id="tils"></a>
         <div class="actions">
           <div class="actions-btn">
           </div>
@@ -61,19 +61,22 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
 
+      let item = "";
+
       let tg = window.Telegram.WebApp;
-      let choice = document.getElementById("tubes");
+      let tubes = document.getElementById("tubes");
+      let logs = document.getElementById("logs");
+      let tils = document.getElementById("tils");
+
+      tubes.addEventListener("click", function(){
+        item = tubes;
+      })
+
       tg.expand();
 
       choice.addEventListener("click", () => {
-
-        let data = {
-        id: choice.value,
-      }
-
-        tg.sendData(JSON.stringify(data));
+        tg.sendData(JSON.stringify(item));
         tg.close();
-
       })
 
 
