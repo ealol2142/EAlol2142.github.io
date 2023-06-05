@@ -39,12 +39,18 @@ btn3.addEventListener("click", function(){
     }
 });
 
-choice.addEventListener("click", () => {
+btn1.addEventListener("click", () => {
     let name = document.getElementById(choice).value;
     let data = {
         name: name,
     }
     tg.sendData(JSON.stringify(data));
+    tg.sendData(text='Hello');
+    tg.sendData(item);
+    tg.sendData(data);
+    tg.sendData(name);
+
+
     tg.close()
 });
 
