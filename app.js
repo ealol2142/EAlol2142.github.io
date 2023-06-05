@@ -10,7 +10,7 @@ let boards = document.getElementById("Boards");
 let floor_til = document.getElementById("Floor_tiles");
 
 alum_pipes.addEventListener("click", function(){
-    item = "Aluminum pipes";
+    item = "Al";
 });
 
 boards.addEventListener("click", function(){
@@ -18,12 +18,12 @@ boards.addEventListener("click", function(){
 });
 
 floor_til.addEventListener("click", function(){
-    item = "Floor tiles";
+    item = "Floortiles";
 });
 
 btn1.addEventListener("click", () => {
     data={
-        itemName: item,
+        itemName: "Al",
     }
     tg.sendData(data);
     tg.close()
